@@ -17,7 +17,9 @@ class CategoryFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'title' => $this->faker->text(30),
+            'color' => $this->faker->safeHexColor(),
+            'user_id' => 1
         ];
     }
 }
