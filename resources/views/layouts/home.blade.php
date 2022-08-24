@@ -20,9 +20,7 @@
         </div>
         <div class="content">
             <nav>
-                <a href="#" class="btn btn-primary">
-                    Criar Tarefa
-                </a>
+                <a href="#" class="btn btn-primary"> Criar Tarefa </a>
             </nav>
             <main>
                 <section class="graph">
@@ -35,7 +33,7 @@
                     <div class="graph-placeholder"></div>
                     <div class="tasks_left_footer">
                         <img src="/assets/images/icon-info.png">
-                         Restam 3 tarefas para serem realizadas
+                        Restam 3 tarefas para serem realizadas
                     </div>
                 </section>
                 <section class="list">
@@ -45,24 +43,6 @@
                         </select>
                     </div>
                     <div class="task_list">
-                        <div class="task">
-                            <div class="title">
-                                <input type="checkbox">
-                                <div class="task_title"> Título da tarefa </div>
-                            </div>
-                            <div class="priority">
-                                <div class="sphere"></div>
-                                <div> tarefa</div>
-                            </div>
-                            <div class="actions">
-                                <a href="#">
-                                    <img src="/assets/images/icon-edit.png">
-                                </a>
-                                <a href="#">
-                                    <img src="/assets/images/icon-delete.png">
-                                </a>
-                            </div>
-                        </div>
                         <div class="task">
                             <div class="title">
                                 <input type="checkbox">
