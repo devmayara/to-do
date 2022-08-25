@@ -61,13 +61,13 @@ a.btn {
 
 main {
     display: flex;
-    padding: 20px;
+    padding: 0;
 }
 
 section.graph {
     width: 33%;
     height: 100%;
-    padding: 5px;
+    padding: 20px 20px 0 20px;
 }
 .graph_header {
     display: flex;
@@ -90,6 +90,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 10px;
 }
 .graph_header-subtitle {
     margin-top: 10px;
@@ -110,11 +111,17 @@ h2 {
     margin-top: 50px;
 }
 .list {
-    padding: 5px 15px;
+    padding: 20px 20px 0 20px;
     flex: 1;
 }
 .list_header {
     display: flex;
+}
+.list_header-select {
+    background-color: transparent;
+    border: 0;
+    font-size: 18px;
+    color: var(--text-dark);
 }
 .task_list {
     display: flex;

@@ -27,7 +27,11 @@
                     <div class="graph_header">
                         <h2>Progresso do Dia</h2>
                         <div class="graph_header_line"></div>
-                        <div class="graph_header_date">Data</div>
+                        <div class="graph_header_date">
+                            <img src="/assets/images/icon-prev.png">
+                                13 de Dez
+                            <img src="/assets/images/icon-next.png">
+                        </div>
                     </div>
                     <div class="graph_header-subtitle"> Tarefas: <b>3/6</b> </div>
                     <div class="graph-placeholder"></div>
