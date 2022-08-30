@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout page="To-do | Home">
 
     <section class="graph">
         <div class="graph_header">

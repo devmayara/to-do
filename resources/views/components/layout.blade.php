@@ -11,7 +11,7 @@
     {{-- CSS --}}
     <link rel="stylesheet" href="/assets/css/style.css">
 
-    <title>To-do</title>
+    <title>{{$page ?? 'To-do'}}</title>
 </head>
 <body>
     <div class="container">
