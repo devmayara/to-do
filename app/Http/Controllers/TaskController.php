@@ -6,18 +6,23 @@ use Illuminate\Http\Request;
 
 class TaskController extends Controller
 {
-    public function create()
+    public function index()
+    {
+        return view('tasks.view');
+    }
+
+    public function create(Request $request)
     {
         return view('tasks.create');
     }
 
-    public function edit()
+    public function edit(Request $request)
     {
         return view('tasks.edit');
     }
 
-    public function view()
+    public function delete(Request $request)
     {
-        return view('tasks.view');
+        return redirect(route('home'));
     }
 }
