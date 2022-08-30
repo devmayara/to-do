@@ -1,5 +1,9 @@
 <x-layout page="To-do | Home">
 
+    <x-slot:btn>
+        <a href="#" class="btn btn-primary"> Criar Tarefa </a>
+    </x-slot:btn>
+
     <section class="graph">
         <div class="graph_header">
             <h2>Progresso do Dia</h2>
