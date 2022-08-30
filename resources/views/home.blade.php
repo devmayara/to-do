@@ -28,21 +28,9 @@
             </select>
         </div>
 
-        @php
-            $tasks = [
-                ['done' => false, 'title' => 'Minha Primeira Task', 'category' => 'Categoria 1', 'edit_url' => '#', 'delete_url' => '#'],
-                ['done' => true, 'title' => 'Minha Segunda Task', 'category' => 'Categoria 2', 'edit_url' => '#', 'delete_url' => '#'],
-                ['done' => false, 'title' => 'Minha Terceira Task', 'category' => 'Categoria 3', 'edit_url' => '#', 'delete_url' => '#'],
-                ['done' => true, 'title' => 'Minha Quarta Task', 'category' => 'Categoria 4', 'edit_url' => '#', 'delete_url' => '#'],
-                ['done' => false, 'title' => 'Minha Quinta Task', 'category' => 'Categoria 5', 'edit_url' => '#', 'delete_url' => '#'],
-            ]
-        @endphp
-
-        <x-task :data=$tasks[0] />
-        <x-task :data=$tasks[1] />
-        <x-task :data=$tasks[2] />
-        <x-task :data=$tasks[3] />
-        <x-task :data=$tasks[4] />
+        @foreach ($tasks as $task)
+            <x-task :data=$task />
+        @endforeach
 
     </section>
 
