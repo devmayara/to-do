@@ -27,25 +27,23 @@
                 <option value="1">Todas as tarefas</option>
             </select>
         </div>
-        <div class="task_list">
-            <div class="task">
-                <div class="title">
-                    <input type="checkbox">
-                    <div class="task_title"> Título da tarefa </div>
-                </div>
-                <div class="priority">
-                    <div class="sphere"></div>
-                    <div> tarefa</div>
-                </div>
-                <div class="actions">
-                    <a href="#">
-                        <img src="/assets/images/icon-edit.png">
-                    </a>
-                    <a href="#">
-                        <img src="/assets/images/icon-delete.png">
-                    </a>
-                </div>
-            </div>
-        </div>
+
+        @php
+            $tasks = [
+                ['done' => false, 'title' => 'Minha Primeira Task', 'category' => 'Categoria 1', 'edit_url' => '#', 'delete_url' => '#'],
+                ['done' => true, 'title' => 'Minha Segunda Task', 'category' => 'Categoria 2', 'edit_url' => '#', 'delete_url' => '#'],
+                ['done' => false, 'title' => 'Minha Terceira Task', 'category' => 'Categoria 3', 'edit_url' => '#', 'delete_url' => '#'],
+                ['done' => true, 'title' => 'Minha Quarta Task', 'category' => 'Categoria 4', 'edit_url' => '#', 'delete_url' => '#'],
+                ['done' => false, 'title' => 'Minha Quinta Task', 'category' => 'Categoria 5', 'edit_url' => '#', 'delete_url' => '#'],
+            ]
+        @endphp
+
+        <x-task :data=$tasks[0] />
+        <x-task :data=$tasks[1] />
+        <x-task :data=$tasks[2] />
+        <x-task :data=$tasks[3] />
+        <x-task :data=$tasks[4] />
+
     </section>
+
 </x-layout>
