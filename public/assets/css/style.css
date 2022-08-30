@@ -52,6 +52,7 @@ nav {
     transform: scale(1.05);
 }
 a.btn {
+    margin-left: 8px;
     text-decoration: none;
 }
 .btn-primary {
