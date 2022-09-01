@@ -11,7 +11,7 @@
 
             <x-form.text_input name="title" label=" Título da tarefa " placeholder="Digite o título da tarefa" required="required"/>
 
-            <x-form.text_input type="date" name="due_data" label=" Data de Realização " required="required"/>
+            <x-form.text_input type="datetime-local" name="due_data" label=" Data de Realização " required="required"/>
 
             <x-form.select_input name="category" label=" Categoria " required="required">
                 @foreach ($categories as $category)
