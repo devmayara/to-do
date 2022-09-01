@@ -2,7 +2,7 @@
 
 - Entidades:
 
-    - Usuário:
+    - Usuário: (users)
 
     - Usuário x Tarefa
         -- um Usuário pode criar várias tarefas
@@ -10,7 +10,7 @@
     - Usuário x categorias
         -- Um Usuário pode ter várias Categorias
 
-    - Tarefas:
+    - Tarefas: (tasks)
 
     - Tarefa x Usuário
         -- Uma tarefa sempre vai pertencer a um único usuário
@@ -18,7 +18,7 @@
     - Tarefa x Categorias
         -- Uma tarefa sempre vai pertencer a uma categoria
 
-    - Categorias:
+    - Categorias: (categories)
 
     - Categorias x Tarefa
         -- Uma Categorias pode ter várias Tarefas
