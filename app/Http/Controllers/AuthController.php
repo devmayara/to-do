@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AuthController extends Controller
@@ -11,8 +12,15 @@ class AuthController extends Controller
         return view('login');
     }
 
-    public function register()
+    public function register(Request $request)
     {
         return view('register');
+    }
+
+    public function register_action(Request $request)
+    {
+        // dd($request);
+        $data = $request->only('name', 'email', 'password');
+        $userCreated = User::create($data);
     }
 }
