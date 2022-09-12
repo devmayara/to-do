@@ -20,7 +20,20 @@ class AuthController extends Controller
     public function register_action(Request $request)
     {
         // dd($request);
+        /***************************************************
+                    REGRAS PARA REGISTRO:
+        - Todos os campos são REQUIRED
+        - Email Único
+        - Password de no mínimo 6 caracteres
+        ***************************************************/
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:6|confirmed',
+        ]);
+
         $data = $request->only('name', 'email', 'password');
-        $userCreated = User::create($data);
+
+        return redirect(route('login'));
     }
 }
