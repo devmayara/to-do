@@ -13,9 +13,11 @@
 
             <x-form.text_input type="text" name="title" label=" Título da tarefa " value="{{ $task->title }}" />
 
+            <x-form.checkbox_input name="is_done" label="Tarefa Realizada?" checked="{{ $task->is_done }}" />
+
             <x-form.text_input type="datetime-local" name="due_date" label=" Data de Realização "
                 value="{{ $task->due_date }}" />
-                {{ $task->due_date }}
+
             <x-form.select_input name="category_id" label=" Categoria " required="required">
                 @foreach ($categories as $category)
                     <option value="{{ $category->id }}" @if ($category->id == $task->category_id) selected @endif>
