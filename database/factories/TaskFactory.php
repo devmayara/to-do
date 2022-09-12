@@ -20,7 +20,7 @@ class TaskFactory extends Factory
     {
         $user = User::all()->random();
 
-        while(count($user->categories) == 0) {
+        while (count($user->categories) == 0) {
             $user = User::all()->random();
         }
 
@@ -28,7 +28,7 @@ class TaskFactory extends Factory
             'is_done' => $this->faker->boolean(70),
             'title' => $this->faker->text(30),
             'description' => $this->faker->text(60),
-            'due_data' => $this->faker->dateTime(),
+            'due_date' => $this->faker->dateTime(),
             'user_id' => $user,
             'category_id' => $user->categories->random()
         ];

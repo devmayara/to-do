@@ -28,7 +28,7 @@ class TaskController extends Controller
         $task = $request->only([
             'title',
             'description',
-            'due_data',
+            'due_date',
             'category_id',
         ]);
         $task['user_id'] = 1;
@@ -56,7 +56,17 @@ class TaskController extends Controller
 
     public function edit_action(Request $request)
     {
-        return 'ok';
+        // dd($request->all());
+        $request_data = $request->only(['title', 'due_date', 'category_id', 'description']);
+
+        $task = Task::find($request->id);
+        if (!$task) {
+            return 'ERROR de task não existente';
+        }
+        $task->update($request_data);
+        $task->save();
+
+        return redirect(route('home'));
     }
 
     public function delete(Request $request)

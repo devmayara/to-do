@@ -21,7 +21,7 @@ return new class extends Migration
             $table->boolean('is_done')->default(false);
             $table->string('title');
             $table->string('description');
-            $table->dateTime('due_data');
+            $table->dateTime('due_date');
             $table->foreignIdFor(User::class)->references('id')->on('users')->onDelete('CASCADE');
             $table->foreignIdFor(Category::class)->references('id')->on('categories')->onDelete('CASCADE');
             $table->timestamps();
@@ -35,7 +35,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('tashs', function(Blueprint $table) {
+        Schema::table('tashs', function (Blueprint $table) {
             $table->dropForeignIdFor(User::class);
             $table->dropForeignIdFor(Category::class);
         });
